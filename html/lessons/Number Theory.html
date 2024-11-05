@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <title>Intro to Sets</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../css/custom.css" />
+        <script src="../../bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        </head>
+    <body>
+        <script>
+            MathJax = { tex: { inlineMath: [ ['$', '$'], ['\\(', '\\)'] ] } };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script type="text/javascript" src="../../node_modules/marked/marked.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <div class="sticky-top p-3 bg-primary text-white text-left">
+            <h3>Witega</h3>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jNQXAC9IVRw" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Intro to Sets</h3>
+                    <h6>Number Theory: 1.1</h6>
+                    <p>Julian J. Shapiro</p>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="row">
+                <div class="col-sm-9" id="main">
+                    <p># Intro to Sets<br>### Notation and Syntax<br>Sets are just groups of distinct numbers.  Some basic syntax:<br>$$C = \\{x,y,\ldots,z,\ldots\\}$$<br>>Set C is x, y, the values between y and z, and the values after z.  When an ellipsis is present, you have to follow the pattern.  For instance: $\\{1,2,...,6\\}$ refers to the set $\\{1,2,3,4,5,6\\}$.<br>>Typically, the pattern will be every integer.<br><br>Subsets are sets that are only made out of the elements of a larger set, called a superset.  If the subset is not equal to the superset, then it is considered proper, and vice versa.<br><br>Some symbols: <br>> $a\in b$, element $a$ is in set $b$.<br>> $a\ni b$, element $b$ is in set $a$.<br>> $a\cup b$, the union of the sets $a$ and $b$.  ($\\{1,2,3\\}\cup\\{2,3,4\\}=\\{1,2,3,4\\}$)<br>> $a\cap b$, the intersection of the sets $a$ and $b$. ($\\{1,2,3\\}\cap\\{2,3,4\\}=\\{2,3\\}$)<br>> $a\setminus b$, the difference of the sets $a$ and $b$. ($\\{1,2,3\\}\setminus\\{2,3,4\\}=\\{1\\}$)<br>> $a\subset b$, set $a$ is a proper subset of set $b$. ($\\{1,3,5\\}\subset\\{1,2,3,4,5\\}$)<br>> $a\supset b$, set $a$ is a proper superset of set $b$. ($\\{1,2,3,4,5\\}\supset\\{1,3,5\\}$)<br>> $a\subseteq b$, set $a$ is a subset of set $b$.<br>> $a\supseteq b$, set $a$ is a superset of set $b$.<br> <br>### Common Sets<br>**The Natural Numbers**: the positive integers. <br>$$\mathbb{N}=\\{1,2,3,\ldots\\}$$<br><br><br>> Most mathematicians consider zero to also be a natural number.  Sometimes $\mathbb{N}^\ast$ or $\mathbb{Z}^*_+$ are used to exclude 0, and $\mathbb{N}_0$ or $\mathbb{Z}^+_0$ can be used to include 0.<br><br>**The Integers**: every whole number<br>$$\mathbb{Z} = {\\{...,-3,-2,-1,0,1,2,3,\ldots\\}}$$<br>**Rational Numbers**: any number that can be expressed as $\frac{a}{b}$, where $a$ and $b$ are both integers ($b$ being non-zero).<br>$$\mathbb{Q}\ni0.75, -135.384, \frac{1}{3}$$<br>**Real Numbers ($\mathbb{R}$):** All of the points on an infinitely long number line.  They can include any number operations, and they can be very, very, long and complex.<br>**Complex Numbers ($\mathbb{C}$)**: These numbers contain a real part, and a complex part in terms of $i$.<br></p>
+                </div>
+                <div class="col-sm-3 text-break" style="border-left: 1px solid #777" id="sources">
+                    <p>### Sources<br>https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols#Set_and.2For_logic_notation<br>*Introduction to the Theory of Numbers*, by G.H Hardy and E. M. Wright, Chapter 1<br></p>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-bottom bg-secondary p-3 d-flex justify-content-between align-items-center">
+            <div class="left-buttons">
+                <a href="#link" class="btn btn-info" role="button">
+                    <span class="bi-arrow-left"></span>
+                </a>
+            </div>
+            <div class="right-buttons">
+                <a href="https://github.com/julianjshapiro/witega" class="btn btn-primary" role="button">
+                <span class="bi-github"></span>
+                </a> &nbsp;&nbsp;&nbsp; <a href="#link" class="btn btn-primary" role="button">
+                <span class="bi-moon"></span>
+                </a>
+            </div>
+        </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() { 
+            const markdownText = document.getElementById('main').innerText;
+            console.log(markdownText);
+            const parsedMarkdown = marked.parse(markdownText, {
+                gfm: true,
+                breaks: true
+            });
+            document.getElementById('main').innerHTML = parsedMarkdown;
+            
+            const sources = document.getElementById('sources').innerText;
+            console.log(sources);
+            const parsedSources = marked.parse(sources, {
+                gfm: true,
+                breaks: true
+            });
+            document.getElementById('sources').innerHTML = parsedSources;
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "witega",
+  "version": "1.0.0",
+  "description": "Derived from Wítega, the Old English \"knowledge-haver,\" Witega strives to teach people of all ages more advanced math topics via many easy to understand courses.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "marked": "^14.1.3"
+  }
+}
