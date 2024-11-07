@@ -15,7 +15,7 @@ metadata['sources']=sources
 markdown = "".join(f"{line}<br>" for line in lines[1:])
 
 env = Environment(loader=FileSystemLoader('.'))
-template = env.get_template('./py/lesson_template.html')
+template = env.get_template('./html/templates/lesson_template.html')
 
 data = {
     'subject': metadata['subject'],

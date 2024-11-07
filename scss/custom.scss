@@ -1,4 +1,5 @@
-// #231942 #5E548E #9F86C0 #BE95C4 #E0B1CB
+
+// #191528 #231942 #5E548E #9F86C0 #BE95C4 #E0B1CB #ECCEDF
 $theme-colors: (
   "primary":    #5E548E,
   "secondary":  #231942,
@@ -7,7 +8,18 @@ $theme-colors: (
   // "warning":    $warning,
   // "danger":     $danger,
   // "light":      $light,
-  // "dark":       $dark
+  "dark":       #231942
 );
+
+
+// Define a custom Midnight theme under the 'data-bs-theme="midnight"' selector
+[data-bs-theme="midnight"] {
+  // You can also customize other Bootstrap components in this block if needed
+  --bs-body-color: #F1DAE7;   // Text color for body
+  --bs-body-bg: #191528;      // Background color for body
+  --bs-link-color: #BE95C4;   // Link color
+  --bs-link-hover-color: #9F86C0;
+}
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
