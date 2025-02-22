@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
-import "./globals.css";
+import "../../styles/globals.css";
 
 const vazirmatn = Vazirmatn({
     variable: "--font-vazirmatn",
@@ -26,7 +26,7 @@ export default function RootLayout({
                     <nav className="bg-tertiary px-6 lg:px-8 py-2.5 pt-5 pb-5">
                         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                             <a href="#" className="flex items-center">
-                                <img
+                                <img 
                                     src="/mini.svg"
                                     className="mr-3 h-5 sm:h-7"
                                     alt="Witega Logo"
