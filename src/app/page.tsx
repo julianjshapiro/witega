@@ -33,7 +33,7 @@ export default function Home() {
 
     return (
         <div>
-            <div className="w-full bg-secondary pt-12 pb-12 flex items-center justify-center lg:order-2 overflow-hidden">
+            <div className="w-full bg-secondary pt-12 mb-12 pb-12 flex items-center justify-center lg:order-2 overflow-hidden">
                 <div className="embla w-full" ref={emblaRef}>
                     <div className="embla__container flex w-full">
                         {Array.from(Array(SLIDE_COUNT).keys()).map((index) => (
@@ -57,7 +57,7 @@ export default function Home() {
                 </div>
             </div>
             <MathJaxContext>
-                <MathJax className="text-6xl pt-[50] text-center">
+                <MathJax className="text-6xl pt-[0] text-center">
                     {"\\(\\sqrt[w]{-1}tega\\)"}
                 </MathJax>
             </MathJaxContext>
